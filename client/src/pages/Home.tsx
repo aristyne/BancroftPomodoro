@@ -40,9 +40,18 @@ function BrandMark() {
   return (
     <span className="brand-mark" aria-hidden="true">
       <svg viewBox="0 0 44 44" fill="none">
-        <path d="M22 9v26M15 18h14" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" />
-        <path d="M22 5.5a16.5 16.5 0 1 0 0 33 16.5 16.5 0 0 0 0-33Z" stroke="currentColor" strokeOpacity=".32" />
-        <circle cx="22" cy="22" r="2" fill="currentColor" />
+        <path
+          d="M10 35.5c4.4-3.3 7.1-7.1 8-11.4-2.4-1.7-3.9-4.5-3.9-7.6 0-5.3 4.2-9.5 9.5-9.5 4 0 7.4 2.5 8.9 6l-4.2.2 8.9 3.4-5.9 2.8c-.9 3.8-4 6.5-8 7 .2 4.1 2.1 7.9 5.7 11-6.6.9-13.2.4-19-1.9Z"
+          fill="currentColor"
+        />
+        <circle cx="25.2" cy="14.3" r="1.15" fill="var(--evergreen)" />
+        <path
+          d="M17.8 25.6c-1.3 2.7-3.3 4.9-5.9 6.7M36 16.8l-3.3 1.6"
+          stroke="var(--evergreen)"
+          strokeWidth="1.35"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     </span>
   );
