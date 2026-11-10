@@ -39,7 +39,7 @@ function formatTimer(totalSeconds: number) {
 function BrandMark() {
   return (
     <span className="brand-mark" aria-hidden="true">
-      <img src={`${import.meta.env.BASE_URL}eagle-mark.png`} alt="" />
+      <img src={`${import.meta.env.BASE_URL}eagle-mark-white.png`} alt="" />
     </span>
   );
 }
