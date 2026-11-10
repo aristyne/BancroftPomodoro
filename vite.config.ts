@@ -170,7 +170,12 @@ function vitePluginPublicPlatformConfig(): Plugin {
 
 const plugins = [vitePluginPublicPlatformConfig(), react(), tailwindcss(), jsxLocPlugin(), vitePluginManusDebugCollector()];
 
+const isGitHubPagesBuild = process.env.GITHUB_PAGES === "true";
+const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "BancroftPomodoro";
+const base = isGitHubPagesBuild ? `/${repositoryName}/` : "/";
+
 export default defineConfig({
+  base,
   plugins,
   resolve: {
     alias: {
