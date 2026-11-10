@@ -177,8 +177,8 @@ export default function Home() {
             <BrandMark />
           </button>
           <div className="brand-wording">
-            <span className="brand-name">still <i>&</i> steady</span>
-            <span className="brand-caption">A CHRISTIAN SCHOOL FOCUS TIMER</span>
+            <span className="brand-name">Pomodoro Timer</span>
+            <span className="brand-caption">By Bancroft</span>
           </div>
         </div>
         <div className="header-note">
