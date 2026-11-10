@@ -1,7 +1,6 @@
 import { useEffect, useState, type FormEvent } from "react";
 import {
   ArrowRight,
-  ArrowUpRight,
   BookOpen,
   CalendarDays,
   Check,
@@ -45,7 +44,6 @@ function BrandMark() {
         <path d="M22 5.5a16.5 16.5 0 1 0 0 33 16.5 16.5 0 0 0 0-33Z" stroke="currentColor" strokeOpacity=".32" />
         <circle cx="22" cy="22" r="2" fill="currentColor" />
       </svg>
-      <span className="brand-mark-gear"><Settings2 size={11} strokeWidth={2.3} /></span>
     </span>
   );
 }
@@ -173,9 +171,7 @@ export default function Home() {
     <div className="site-frame">
       <header className="site-header">
         <div className="brand-group">
-          <button className="brand-control" onClick={() => setSettingsOpen(true)} type="button" aria-label="Open timer settings" title="Timer settings">
-            <BrandMark />
-          </button>
+          <BrandMark />
           <div className="brand-wording">
             <span className="brand-name">Pomodoro Timer</span>
             <span className="brand-caption">By Bancroft</span>
@@ -196,7 +192,12 @@ export default function Home() {
               <span className={`phase-indicator ${timer.running ? "is-running" : ""}`} />
               <span className="eyebrow">{current.verb}</span>
             </div>
-            <span className="cycle-caption">CYCLE <strong>{String(cycleNumber).padStart(2, "0")}</strong><span className="cycle-divider">/</span>04</span>
+            <div className="timer-head-tools">
+              <span className="cycle-caption">CYCLE <strong>{String(cycleNumber).padStart(2, "0")}</strong><span className="cycle-divider">/</span>04</span>
+              <button className="timer-settings-trigger" onClick={() => setSettingsOpen(true)} type="button" aria-label="Open timer settings" title="Timer settings">
+                <Settings2 size={15} strokeWidth={2} />
+              </button>
+            </div>
           </div>
 
           <div className="timer-intro">
@@ -281,10 +282,6 @@ export default function Home() {
             <span className="note-ornament"><span /></span>
             <p>Take one slow breath. You don’t have to do it all at once.</p>
           </div>
-
-          <a className="source-link" href="https://www.gcu.edu/blog/spiritual-life/50-encouraging-bible-verses" target="_blank" rel="noreferrer">
-            Scripture selections from GCU Spiritual Life <ArrowUpRight size={12} />
-          </a>
         </aside>
       </main>
 

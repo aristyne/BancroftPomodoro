@@ -31,11 +31,8 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .site-frame { max-width: 1500px; min-height: 100vh; margin: 0 auto; padding: 0 56px; display: flex; flex-direction: column; }
 .site-header { height: 108px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(52, 76, 61, .12); }
 .brand-group { display: flex; align-items: center; gap: 15px; }
-.brand-control { border: 0; background: transparent; border-radius: 17px; padding: 0; cursor: pointer; transition: transform .2s ease; }
-.brand-control:hover { transform: translateY(-2px) rotate(-2deg); }
 .brand-mark { width: 49px; height: 49px; position: relative; display: grid; place-items: center; color: #f7f8f3; background: var(--evergreen); border-radius: 17px; box-shadow: 0 7px 18px #344c3d22; }
 .brand-mark svg { width: 37px; height: 37px; }
-.brand-mark-gear { position: absolute; right: -4px; bottom: -4px; width: 20px; height: 20px; display: grid; place-items: center; border: 2px solid #edf0e9; background: #fff; color: var(--moss); border-radius: 50%; }
 .brand-wording { display: flex; flex-direction: column; gap: 4px; }
 .brand-name { font-family: var(--serif); font-size: 25px; letter-spacing: -.4px; line-height: 1; color: var(--evergreen); }
 .brand-name i, .footer-center i { font-style: italic; color: var(--moss); }
@@ -51,6 +48,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .timer-card { position: relative; overflow: hidden; background: var(--paper); padding: 34px 46px 28px; display: flex; flex-direction: column; align-items: center; }
 .timer-card::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--evergreen), var(--moss) 58%, #bfcfbb); }
 .timer-card-head { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+.timer-head-tools { display: flex; align-items: center; gap: 12px; }
+.timer-settings-trigger { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid #dce5d8; border-radius: 10px; color: #738a6e; background: #eef2eb; cursor: pointer; transition: color .18s ease, background .18s ease, border-color .18s ease; }
+.timer-settings-trigger:hover { color: #344c3d; background: #e5ece1; border-color: #cbd8c6; }
 .phase-heading { display: flex; align-items: center; gap: 9px; }
 .eyebrow { margin: 0; color: #7d897b; font-size: 9px; font-weight: 700; letter-spacing: 1.75px; }
 .phase-indicator { width: 8px; height: 8px; border-radius: 50%; background: #afbbb0; }
@@ -71,7 +71,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .ring-start-dot { fill: #bfcfbb; stroke: #f9faf6; stroke-width: 2; }
 .timer-center { display: flex; flex-direction: column; align-items: center; }
 .timer-label { color: #95a091; font-size: 8px; font-weight: 700; letter-spacing: 2px; }
-.timer-digits { margin: 4px 0 5px; font-variant-numeric: tabular-nums; font-size: clamp(64px, 8.5vw, 88px); line-height: 1; letter-spacing: -6px; font-weight: 500; color: var(--evergreen); }
+.timer-digits { margin: 4px 0 5px; font-variant-numeric: tabular-nums; font-size: clamp(58px, 6.5vw, 76px); line-height: 1; letter-spacing: -5px; font-weight: 500; color: var(--evergreen); }
 .timer-unit { color: #a1aaa0; font-size: 8px; letter-spacing: 2px; }
 .controls-row { width: min(100%, 430px); margin-top: 13px; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
 .minor-control { display: flex; min-width: 54px; flex-direction: column; align-items: center; gap: 6px; border: 0; background: transparent; color: #849080; padding: 8px 5px; font-size: 10px; cursor: pointer; transition: color .2s ease, transform .2s ease; }
@@ -127,9 +127,6 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .note-ornament::before, .note-ornament::after { content: ""; position: absolute; width: 1px; height: 5px; background: #8ea58c; }
 .note-ornament::after { transform: rotate(90deg); }
 .scripture-note p { margin: 1px 0 0; color: #879486; font-family: var(--serif); font-size: 12px; font-style: italic; line-height: 1.5; }
-.source-link { z-index: 1; margin-top: auto; padding-top: 18px; display: flex; justify-content: center; align-items: center; gap: 4px; color: #91a08c; text-decoration: none; font-size: 8px; letter-spacing: .1px; transition: color .18s ease; }
-.source-link:hover { color: var(--evergreen); }
-
 .site-footer { min-height: 62px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(52, 76, 61, .12); color: #98a195; font-size: 9px; }
 .footer-center { display: flex; align-items: center; gap: 7px; color: #80907d; font-size: 8px; letter-spacing: 1.5px; font-weight: 700; }
 .footer-center > span { width: 6px; height: 6px; border-radius: 50%; background: #8ea58c; }
@@ -193,7 +190,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .timer-card { padding: 29px 28px 23px; }
   .timer-intro { margin-top: 25px; }
   .timer-display { width: 252px; height: 252px; margin-top: 22px; }
-  .timer-digits { font-size: 82px; }
+  .timer-digits { font-size: 68px; }
   .scripture-panel { min-height: auto; padding: 28px 28px 23px; }
   .cross-stage { height: 170px; }
   .cross-halo { width: 115px; height: 115px; }
@@ -202,7 +199,6 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .verse-card { min-height: unset; padding: 17px 18px 15px; }
   .verse-card blockquote { font-size: 17px; }
   .scripture-note { margin-top: 14px; }
-  .source-link { padding-top: 17px; }
   .site-footer { min-height: 59px; }
   .site-footer > span:first-child { display: none; }
   .site-footer { justify-content: space-between; }
@@ -213,7 +209,6 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .brand-group { gap: 10px; }
   .brand-mark { width: 39px; height: 39px; border-radius: 13px; }
   .brand-mark svg { width: 30px; height: 30px; }
-  .brand-mark-gear { width: 17px; height: 17px; }
   .brand-name { font-size: 20px; }
   .brand-caption { font-size: 6.5px; letter-spacing: 1.15px; }
   .header-note { gap: 5px; font-size: 9px; }
@@ -227,7 +222,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .timer-intro h1 { font-size: 38px; }
   .phase-subtitle { font-size: 11px; }
   .timer-display { width: 235px; height: 235px; }
-  .timer-digits { font-size: 75px; letter-spacing: -5px; }
+  .timer-digits { font-size: 64px; letter-spacing: -4px; }
   .controls-row { gap: 5px; }
   .main-control { min-width: 164px; min-height: 49px; padding: 0 14px 0 11px; font-size: 12px; }
   .minor-control { min-width: 45px; font-size: 9px; }
