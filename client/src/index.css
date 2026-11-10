@@ -32,7 +32,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .site-header { height: 108px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(52, 76, 61, .12); }
 .brand-group { display: flex; align-items: center; gap: 15px; }
 .brand-mark { width: 49px; height: 49px; position: relative; display: grid; place-items: center; color: #f7f8f3; background: var(--evergreen); border-radius: 17px; box-shadow: 0 7px 18px #344c3d22; }
-.brand-mark svg { width: 37px; height: 37px; }
+.brand-mark img { width: 37px; height: 37px; border-radius: 6px; object-fit: contain; }
 .brand-wording { display: flex; flex-direction: column; gap: 4px; }
 .brand-name { font-family: var(--serif); font-size: 25px; letter-spacing: -.4px; line-height: 1; color: var(--evergreen); }
 .brand-name i, .footer-center i { font-style: italic; color: var(--moss); }
@@ -181,7 +181,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .site-frame { padding: 0 20px; }
   .site-header { height: 86px; }
   .brand-mark { width: 43px; height: 43px; border-radius: 15px; }
-  .brand-mark svg { width: 33px; height: 33px; }
+  .brand-mark img { width: 33px; height: 33px; }
   .brand-name { font-size: 22px; }
   .brand-caption { font-size: 7px; letter-spacing: 1.4px; }
   .header-note { gap: 6px; font-size: 10px; }
@@ -208,7 +208,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .site-header { height: 78px; }
   .brand-group { gap: 10px; }
   .brand-mark { width: 39px; height: 39px; border-radius: 13px; }
-  .brand-mark svg { width: 30px; height: 30px; }
+  .brand-mark img { width: 30px; height: 30px; }
   .brand-name { font-size: 20px; }
   .brand-caption { font-size: 6.5px; letter-spacing: 1.15px; }
   .header-note { gap: 5px; font-size: 9px; }
